@@ -6,6 +6,9 @@ latestversion=$(curl -sS https://papermc.io/api/v1/paper/{minecraft-version}/lat
 #get currently installed build number.
 currentversion=$(cat {server-path}/currentpaperversion.txt)
 
+#set slack webhook url.
+slack-webhook-url=https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXX
+
 #check if server is online
 nc -v -z -w2 {server-ip} 25565 &> /dev/null;
 
